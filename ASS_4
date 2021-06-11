@@ -35,3 +35,55 @@ assign
 
 endmodule
 
+///////////_TestBench_///////////
+module testbench (); // main 
+    reg Inp1, Inp2, Inp3; // Reg Initialization
+    wire Out; // Wire Initialization
+decoder decoder(
+    .a(Inp1), .b(Inp2), .c(Inp3),  // initialization procces
+    .C(Out) // initialization procces
+);
+initial begin //All ocurances 
+    Inp1 = 1'b0; 
+	 Inp2 = 1'b0; 
+	 Inp3 = 1'b0;
+    #5;
+   
+    Inp1 = 1'b0; 
+	 Inp2 = 1'b0; 
+	 Inp3 = 1'b1;
+    #5;
+   
+    Inp1 = 1'b0; 
+	 Inp2 = 1'b1; 
+	 Inp3 = 1'b0;
+    #5;
+   
+    Inp1 = 1'b0; 
+	 Inp2 = 1'b1; 
+	 Inp3 = 1'b1;
+    #5;
+   
+    Inp1 = 1'b1; 
+	 Inp2 = 1'b0; 
+	 Inp3 = 1'b0;
+    #5;
+   
+    Inp1 = 1'b1; 
+	 Inp2 = 1'b0; 
+	 Inp3 = 1'b1;
+    #5;
+
+    Inp1 = 1'b1; 
+	 Inp2 = 1'b1; 
+	 Inp3 = 1'b0;
+    #5;
+
+    Inp1 = 1'b1; 
+	 Inp2 = 1'b1; 
+	 Inp3 = 1'b1;
+    #5;
+end
+endmodule //end
+
+
