@@ -30,7 +30,7 @@ initial begin
     inp= 2'b11; #30;
 	 
 	 s = 0;
-	 inp= 3'b11; #30;
+	 inp= 2'b11; #30;
 	 
 
 end
