@@ -24,7 +24,7 @@ always@(*)
 			3'b101: out = 8'b0010_0000;
 			3'b110: out = 8'b0100_0000;
 			3'b111: out = 8'b1000_0000;
-			default:out = 8'bxxxx_xxx;
+			default:out = 8'bxxxx_xxxx;
 		
 		endcase
 	end
