@@ -19,7 +19,7 @@ endmodule
 module tb ();
 
 reg [17:0]immediateIN;
-reg clk;
+reg U;
 wire [31:0]immediateOUT;
 
 IEU IEU (
