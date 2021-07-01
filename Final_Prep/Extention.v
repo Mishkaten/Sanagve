@@ -13,3 +13,25 @@ assign immediateOUT[17:0] = immediateIN[17:0];
 assign immediateOUT[31:18] = U ?  {(14){1'b0}} : {(14){immediateIN[17]}};
 
 endmodule
+
+
+////////_TB_///////////
+module tb ();
+
+reg [17:0]immediateIN;
+reg clk;
+wire [31:0]immediateOUT;
+
+IEU IEU (
+	immediateIN, U, immediateOUT, 
+	);
+	
+initial begin
+
+immediateIN = 18'b00000_10000_10000_100;
+//U = 1;
+#50;
+
+end
+    
+endmodule
